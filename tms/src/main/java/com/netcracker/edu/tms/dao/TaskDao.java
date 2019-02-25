@@ -12,7 +12,7 @@ public interface TaskDao {
 
     Task getTaskById(BigInteger taskId);
 
-    List<Task> listOfTasksByName(String taskName);
+    List<Task> getTaskByName(String taskName);
 
     boolean addTask(Task task);
 
@@ -20,17 +20,17 @@ public interface TaskDao {
 
     boolean deleteTask(Task task);
 
-    List<Task> listOfTasksByReporter(BigInteger reporterId);//argument should be User instance
+    List<Task> getTaskByReporter(BigInteger reporterId);//argument should be User instance
 
-    List<Task> listOfTasksByAssignee(BigInteger assigneeId);//argument should be User instance
+    List<Task> getTaskByAssignee(BigInteger assigneeId);//argument should be User instance
 
-    List<Task> listOfTasksByCreationDate(Date creationDate);
+    List<Task> getTaskByCreationDate(Date creationDate);
 
-    List<Task> listOfTasksByProject(BigInteger projectId);//argument should be Project instance
+    List<Task> getTaskByProject(BigInteger projectId);//argument should be Project instance
 
-    List<Task> listOfTasksByStatus(Status taskStatus);
+    List<Task> getTaskByStatus(Status taskStatus);
 
-    List<Task> listOfTasksByPriority(Priority taskPriority);
+    List<Task> getTaskByPriority(Priority taskPriority);
 
 
 }
