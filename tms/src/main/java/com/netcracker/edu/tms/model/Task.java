@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.format.annotation.DateTimeFormat;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -23,7 +22,6 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
 @Entity
 @Table(name = "tasks")
 public class Task {
@@ -33,16 +31,16 @@ public class Task {
     @Column(name = "task_id", unique = true, nullable = false)
     private BigInteger taskId;
 
-    @Column(name = "task_name",nullable = false)
+    @Column(name = "task_name", nullable = false)
     private String taskName;
 
     @Column(name = "task_description")
     private String taskDescription;
 
-    @Column(name = "creation_date",updatable = false)
+    @Column(name = "creation_date", updatable = false)
     @CreationTimestamp
     @Temporal(TemporalType.DATE)
-    @DateTimeFormat(pattern="dd/MM/yyyy")
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
     private Date creationDate;
 
     @Column(name = "due_date")
