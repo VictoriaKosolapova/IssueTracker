@@ -4,16 +4,20 @@
   "description": "",
   "main": "src/app",
   "devDependencies": {
+    "axios": "^0.18.0",
     "chai": "^4.1.2",
     "gh-pages": "^1.1.0",
     "prettier": "1.13.0",
     "react-scripts": "^1.1.4"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "big.js": "^5.1.2",
     "github-fork-ribbon-css": "^0.2.1",
     "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "react-dom": "^16.4.0",
+    "react-router": "^3.2.1",
+    "react-router-dom": "^4.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
